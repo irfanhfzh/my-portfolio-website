@@ -13,7 +13,7 @@ const PortfolioSection = ({
 		<>
 			<div
 				id={title.split(" ").join("").toLowerCase()}
-				className={`grid grid-cols-1 tablet:grid-cols-[1fr,2fr] tablet:gap-10 items-center tablet:justify-between scroll-mt-32 tablet:scroll-mt-20 ${
+				className={`grid grid-cols-1 tablet:grid-cols-[1fr,2fr] tablet:gap-10 items-center tablet:justify-between scroll-mt-32 tablet:scroll-mt-36 ${
 					id % 2 === 0
 						? "tablet:grid-cols-[1fr,2fr]"
 						: "tablet:grid-cols-[2fr,1fr]"
@@ -45,7 +45,9 @@ const PortfolioSection = ({
 							</p>
 							<p className="text-white">
 								Kategori :{" "}
-								<span className="font-semibold text-primary">{category}</span>
+								<span className="text-lg font-bold text-primary">
+									{category}
+								</span>
 							</p>
 							<div className="flex items-center gap-4">
 								<a
@@ -80,7 +82,9 @@ const PortfolioSection = ({
 							</p>
 							<p className="text-white">
 								Kategori :{" "}
-								<span className="font-semibold text-primary">{category}</span>
+								<span className="text-lg font-bold text-primary">
+									{category}
+								</span>
 							</p>
 							<div className="flex items-center gap-4">
 								<a
@@ -145,7 +149,7 @@ const PortfolioSection = ({
 						</p>
 						<p className="text-white">
 							Kategori :{" "}
-							<span className="font-semibold text-primary">{category}</span>
+							<span className="text-lg font-bold text-primary">{category}</span>
 						</p>
 						<div className="flex items-center gap-4">
 							<a
