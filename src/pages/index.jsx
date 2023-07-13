@@ -2,6 +2,7 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import axios from "axios";
 import { useEffect, useState } from "react";
+import CVSaya from "../assets/CV_ATS_Irfan_Hafizh.pdf";
 import Layout from "../components/Layout";
 import PortfolioCard from "../components/PortfolioCard";
 import Shape from "../components/Shape";
@@ -133,9 +134,13 @@ function index() {
 						>
 							Email Saya
 						</a>
-						<button className="px-4 py-3 font-bold text-white transition-all duration-300 ease-in-out rounded-lg bg-secondary hover:opacity-75">
+						<a
+							href={CVSaya}
+							className="px-4 py-3 font-bold text-white transition-all duration-300 ease-in-out rounded-lg bg-secondary hover:opacity-75"
+							download
+						>
 							Download CV Saya
-						</button>
+						</a>
 					</div>
 				</section>
 			</main>

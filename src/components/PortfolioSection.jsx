@@ -13,12 +13,12 @@ const PortfolioSection = ({
 		<>
 			<div
 				id={title.split(" ").join("").toLowerCase()}
-				className={`grid grid-cols-1 tablet:grid-cols-[1fr,2fr] tablet:gap-10 items-center tablet:justify-between scroll-mt-10 tablet:scroll-mt-20 ${
+				className={`grid grid-cols-1 tablet:grid-cols-[1fr,2fr] tablet:gap-10 items-center tablet:justify-between scroll-mt-32 tablet:scroll-mt-20 ${
 					id % 2 === 0
 						? "tablet:grid-cols-[1fr,2fr]"
 						: "tablet:grid-cols-[2fr,1fr]"
 				}`}
-				data-aos={id % 2 === 0 ? "fade-right" : "fade-left"}
+				data-aos="fade-up"
 			>
 				{id % 2 === 0 ? (
 					<>

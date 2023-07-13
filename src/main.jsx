@@ -16,4 +16,5 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 
 AOS.init({
 	duration: 1000,
+	once: true,
 });
