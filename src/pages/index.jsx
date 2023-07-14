@@ -67,12 +67,12 @@ function Index() {
 					</div>
 					<div className="animate-fadeInUp">
 						<p className="text-white" data-aos="fade-left" data-aos-offset={0}>
-							Selamat Datang di Website yang tidak ada gunanya ini, Perkenalakan
+							Selamat Datang di Website yang tidak ada gunanya ini, Perkenalkan
 							nama saya Irfan Hafizh dan Saya juga bukan siapa siapa jadi ga
 							guna juga saya perkenalan ya hehehe, Sebagai pengangguran sejati
 							dari tahun 2020 sampai sekarang :’) <br /> <br /> Saya gatau lagi
 							mau ngapain dihidup ini selain bermain Game, nonton Youtube, Makan
-							dan Tidur sudah itu saja kegiatan saya selama Nganggur, diulang
+							dan Tidur sudah itu saja kegiatan saya selama menganggur, diulang
 							ulang terus tuh kegiatannya udah kayak Infinite Loop aja ya, Nah
 							tujuan saya membuat website ini, Sebenarnya hanya untuk
 							menghentikan Infinite Loop tersebut di Kehidupan Saya yang Stuck
