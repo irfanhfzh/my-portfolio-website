@@ -25,7 +25,7 @@ const PortfolioCard = ({ id, src, title, desc, linkTo }) => {
 				</div>
 			) : (
 				<div
-					className={`lg:relative group max-w-[350px] tablet:max-w-[335px] lg:max-w-[480px] h-[350px] tablet:h-[335px] lg:h-[480px] rounded-[1.25rem] animate-fadeInLeft overflow-hidden ${
+					className={`lg:relative group max-w-[350px] tablet:max-w-[335px] lg:max-w-[480px] h-[350px] tablet:h-[335px] lg:h-[480px] rounded-[1.25rem] animate-fadeInLeft overflow-hidden tablet:w-max ${
 						id === 0
 							? "custom-bg-portfolio-1 bg-primary"
 							: id === 1
@@ -34,9 +34,9 @@ const PortfolioCard = ({ id, src, title, desc, linkTo }) => {
 							? "custom-bg-portfolio-3 bg-primary"
 							: ""
 					}`}
-					style={{ width: "-webkit-fill-available" }}
+					// style={{ width: "max-content" }}
 				>
-					<div className="flex items-center justify-center h-[inherit] p-4 overflow-hidden lg:group-hover:blur-[2px] transition-all duration-300 ease-in-out">
+					<div className="flex flex-col items-center justify-center h-[inherit] p-4 overflow-hidden lg:group-hover:blur-[2px] transition-all duration-300 ease-in-out">
 						<img
 							src={src}
 							alt={title}
@@ -44,7 +44,7 @@ const PortfolioCard = ({ id, src, title, desc, linkTo }) => {
 						/>
 					</div>
 
-					<div className="flex-col items-center hidden gap-4 transition-all duration-300 ease-in-out -translate-x-1/2 lg:absolute lg:flex -translate-y-0 -top-28 left-1/2 group-hover:-translate-y-1/2 group-hover:top-1/2">
+					<div className="flex-col items-center hidden gap-4 transition-all duration-300 ease-in-out -translate-x-1/2 lg:absolute lg:flex -translate-y-0 -top-36 left-1/2 group-hover:-translate-y-1/2 group-hover:top-1/2">
 						<HashLink
 							to={"/projects#" + title.split(" ").join("").toLowerCase()}
 							className="px-4 py-3 font-bold transition-all duration-300 ease-in-out rounded-lg cursor-pointer hover:opacity-80 bg-primary custom-shadow"
@@ -66,25 +66,25 @@ const PortfolioCard = ({ id, src, title, desc, linkTo }) => {
 			<div className="mt-4 max-w-[350px] tablet:max-w-[335px] lg:max-w-[480px] h-fit">
 				<h2 className="font-bold text-[2rem]">{title}</h2>
 				<p className="text-white two-line-text">{desc}</p>
+				{id !== 3 ? (
+					<div className="flex items-center self-start gap-4 mt-4 lg:hidden">
+						<HashLink
+							to={"/projects#" + title.split(" ").join("").toLowerCase()}
+							className="px-4 py-3 font-bold transition-all duration-300 ease-in-out rounded-lg cursor-pointer hover:opacity-80 bg-primary custom-shadow"
+						>
+							See More
+						</HashLink>
+						<a
+							href={linkTo}
+							target="_blank"
+							rel="noreferrer"
+							className="px-4 py-3 font-bold text-white transition-all duration-300 ease-in-out rounded-lg cursor-pointer hover:opacity-80 bg-secondary custom-shadow"
+						>
+							Live Preview
+						</a>
+					</div>
+				) : null}
 			</div>
-			{id !== 3 ? (
-				<div className="flex items-center self-start gap-4 mt-4 lg:hidden">
-					<HashLink
-						to={"/projects#" + title.split(" ").join("").toLowerCase()}
-						className="px-4 py-3 font-bold transition-all duration-300 ease-in-out rounded-lg cursor-pointer hover:opacity-80 bg-primary custom-shadow"
-					>
-						See More
-					</HashLink>
-					<a
-						href={linkTo}
-						target="_blank"
-						rel="noreferrer"
-						className="px-4 py-3 font-bold text-white transition-all duration-300 ease-in-out rounded-lg cursor-pointer hover:opacity-80 bg-secondary custom-shadow"
-					>
-						Live Preview
-					</a>
-				</div>
-			) : null}
 		</div>
 	);
 };

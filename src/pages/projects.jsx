@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Layout from "../components/Layout";
 import PortfolioSection from "../components/PortfolioSection";
 
-function projects() {
+function Projects() {
 	const [category, setCategory] = useState("");
 	const [myProjectsInfo, setMyProjectsInfo] = useState(null);
 
@@ -115,4 +115,4 @@ function projects() {
 	);
 }
 
-export default projects;
+export default Projects;

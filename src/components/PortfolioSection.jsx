@@ -22,10 +22,7 @@ const PortfolioSection = ({
 			>
 				{id % 2 === 0 ? (
 					<>
-						<div
-							className={`hidden tablet:block max-w-[350px] tablet:max-w-[335px] lg:max-w-[480px] h-[350px] tablet:h-[335px] lg:h-[480px] rounded-[1.25rem] mb-4 bg-primary custom-bg-portfolio-1`}
-							style={{ width: "max-content" }}
-						>
+						<div className="hidden tablet:block max-w-[350px] tablet:max-w-[335px] lg:max-w-[480px] h-[350px] tablet:h-[335px] lg:h-[480px] rounded-[1.25rem] mb-4 bg-primary custom-bg-portfolio-1 tablet:w-max">
 							<div className="flex flex-col items-center justify-center p-4 h-[inherit]">
 								<img
 									src={src}
@@ -105,10 +102,7 @@ const PortfolioSection = ({
 								</a>
 							</div>
 						</div>
-						<div
-							className={`hidden tablet:block max-w-[350px] tablet:max-w-[335px] lg:max-w-[480px] h-[350px] tablet:h-[335px] lg:h-[480px] rounded-[1.25rem] mb-4 bg-secondary custom-bg-portfolio-2`}
-							style={{ width: "max-content" }}
-						>
+						<div className="hidden tablet:block max-w-[350px] tablet:max-w-[335px] lg:max-w-[480px] h-[350px] tablet:h-[335px] lg:h-[480px] rounded-[1.25rem] mb-4 bg-secondary custom-bg-portfolio-2 tablet:w-max">
 							<div className="flex flex-col items-center justify-center p-4 h-[inherit]">
 								<img
 									src={src}
@@ -123,12 +117,11 @@ const PortfolioSection = ({
 				{/* Mobile Devices */}
 				<>
 					<div
-						className={`block tablet:hidden max-w-[350px] tablet:max-w-[335px] lg:max-w-[480px] h-[350px] tablet:h-[335px] lg:h-[480px] rounded-[1.25rem] mb-4 ${
+						className={`block tablet:hidden max-w-[350px] tablet:max-w-[335px] lg:max-w-[480px] h-[350px] tablet:h-[335px] lg:h-[480px] rounded-[1.25rem] mb-4 tablet:w-max ${
 							id % 2 === 0
 								? "bg-primary custom-bg-portfolio-1"
 								: "bg-secondary custom-bg-portfolio-2"
 						}`}
-						style={{ width: "max-content" }}
 					>
 						<div className="flex flex-col items-center justify-center p-4 h-[inherit]">
 							<img

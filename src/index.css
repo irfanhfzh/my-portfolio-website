@@ -12,6 +12,20 @@ h2 {
 	@apply text-primary;
 }
 
+h1 {
+	@apply font-bold font-signika;
+}
+
+h2 {
+	@apply font-semibold font-signika;
+}
+
+p,
+a,
+button {
+	@apply leading-relaxed font-imprima;
+}
+
 .custom-bg-portfolio-1 {
 	background-image: url("./assets/images/group-shape1.svg");
 	background-size: auto;

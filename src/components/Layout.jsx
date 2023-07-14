@@ -32,10 +32,16 @@ const Layout = ({ type, children }) => {
 
 	return (
 		<div className="w-full min-h-screen px-5 pt-5 tablet:px-12 tablet:pt-12 lg:px-24 lg:pt-24">
-			<h1 className="animate-slideInDown text-[55px] tablet:text-[112px] lg:text-[158px] font-bold uppercase text-center w-full leading-none">
+			<h1 className="animate-slideInDown text-[55px] tablet:text-[112px] lg:text-[158px] font-bold uppercase text-center w-full leading-[3rem] tablet:leading-none">
 				irfan hafizh
 			</h1>
-			<header className="animate-fadeInUp flex items-center justify-between mt-4 mb-5 tablet:mb-[50px]">
+			<header
+				className={`animate-fadeInUp flex items-center mt-6 mb-5 tablet:mb-[50px] ${
+					type === "home"
+						? "justify-between"
+						: "justify-center tablet:justify-between"
+				}`}
+			>
 				{type === "home" ? (
 					<>
 						<p className="font-semibold text-primary">Pengangguran Sejati.</p>
@@ -51,15 +57,22 @@ const Layout = ({ type, children }) => {
 						<Link to="/" className="hover:underline">
 							Home
 						</Link>{" "}
-						/ <p className="font-bold">Projects</p>
+						/
+						{type === "notfound" ? (
+							<p className="font-bold">Not Found</p>
+						) : (
+							<p className="font-bold">Projects</p>
+						)}
 					</div>
 				)}
-				<a
-					href="#summary"
-					className="hidden font-semibold text-primary tablet:block animate-twBounce animate-infinite"
-				>
-					Explore Now
-				</a>
+				{type === "notfound" ? null : (
+					<a
+						href="#summary"
+						className="hidden font-semibold text-primary tablet:block animate-twBounce animate-infinite"
+					>
+						Explore Now
+					</a>
+				)}
 				<p className="hidden font-semibold text-primary tablet:block">
 					{formatDate(date)}
 				</p>

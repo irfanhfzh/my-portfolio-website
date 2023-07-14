@@ -5,6 +5,11 @@ export default withAnimations({
 	content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
 	theme: {
 		extend: {
+			fontFamily: {
+				signika: ["Signika", "sans-serif"],
+				"istok-web": ["Istok Web", "sans-serif"],
+				imprima: ["Imprima", "sans-serif"],
+			},
 			screens: {
 				tablet: "576px",
 			},

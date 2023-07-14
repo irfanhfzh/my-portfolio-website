@@ -8,7 +8,7 @@ import PortfolioCard from "../components/PortfolioCard";
 import Shape from "../components/Shape";
 import { shapeData } from "../utils/shapeData";
 
-function index() {
+function Index() {
 	const [myProjectsInfo, setMyProjectsInfo] = useState(null);
 
 	const getMyProjectsInfo = async () => {
@@ -37,7 +37,9 @@ function index() {
 							<div
 								key={idx}
 								className={
-									item.type === "Shape 7" ? "hidden tablet:block" : "block"
+									item.type === "Shape 7"
+										? "hidden tablet:contents"
+										: "contents"
 								}
 							>
 								<Shape
@@ -55,13 +57,13 @@ function index() {
 					className="my-20 tablet:my-[130px] lg:my-[200px] grid grid-cols-1 lg:grid-cols-[1fr,2fr] scroll-mt-10"
 				>
 					<div className="animate-fadeInDown">
-						<h2
+						<h1
 							className="text-[2rem] font-bold mb-4"
 							data-aos="fade-right"
 							data-aos-offset={0}
 						>
 							Gausah kenal saya, gaguna...
-						</h2>
+						</h1>
 					</div>
 					<div className="animate-fadeInUp">
 						<p className="text-white" data-aos="fade-left" data-aos-offset={0}>
@@ -86,7 +88,7 @@ function index() {
 				>
 					Project Project Gajelas
 				</h1>
-				<section className="grid grid-cols-1 gap-10 tablet:grid-cols-2">
+				<section className="grid grid-cols-1 gap-10 tablet:gap-20 tablet:grid-cols-2">
 					{displayedProjects?.length === 3
 						? displayedProjects?.map((item, idx) => (
 								<PortfolioCard
@@ -115,10 +117,10 @@ function index() {
 				</section>
 
 				<section
-					className="flex flex-col items-center mt-[4.25rem] lg:mt-32 gap-5"
+					className="flex flex-col items-center my-20 tablet:my-[130px] lg:my-[200px] gap-5"
 					data-aos="fade-up"
 				>
-					<h1 className="text-[2rem] lg:text-5xl uppercase font-bold">
+					<h1 className="text-[2rem] lg:text-5xl font-bold">
 						Mau Kolaborasi ?
 					</h1>
 					<p className="text-white max-w-[415px] text-center">
@@ -148,4 +150,4 @@ function index() {
 	);
 }
 
-export default index;
+export default Index;
